@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nm_cliente: MyString
+  nr_cliente: MyString
+  mensagem: MyString
+  status_chat: false
+  resposta_ia: MyString
+
+two:
+  nm_cliente: MyString
+  nr_cliente: MyString
+  mensagem: MyString
+  status_chat: false
+  resposta_ia: MyString
