@@ -18,7 +18,7 @@ default: &default
   encoding: unicode
   pool: 5
   username: myuser
-  password: 321321
+  password: 1aWro7QqH20gqiQblzds0Lc29m72wcL5
   host: postgresql://myuser:1aWro7QqH20gqiQblzds0Lc29m72wcL5@dpg-cu74kpogph6c73b80v90-a.oregon-postgres.render.com/store_g72b
   port: 5432
 
