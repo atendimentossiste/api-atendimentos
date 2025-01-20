@@ -19,5 +19,5 @@ services:
           property: connectionString
       - key: 6e8685d8cf6e3006e958d8f620fed5e5
         sync: false
-      - key: 2
+      - key: WEB_CONCURRENCY
         value: 2 # sensible default
