@@ -2,6 +2,8 @@
 # exit on error
 set -o errexit
 
+sudo service postgresql start
+
 bundle install
 bundle exec rails assets:precompile
 bundle exec rails assets:clean
