@@ -33,5 +33,6 @@ test:
 production:
   <<: *default
   database: store_production
+  url: <%= ENV['DATABASE_URL'] %>
   username: myuser
   password: 321321
