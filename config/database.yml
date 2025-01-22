@@ -32,7 +32,7 @@ test:
 
 production:
   <<: *default
-  database: store_production
+  database: store_g72b
   url: <%= ENV['DATABASE_URL'] %>
   username: myuser
   password: <%= ENV['DATABASE_PASSWORD'] %>
