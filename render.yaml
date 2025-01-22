@@ -1,6 +1,6 @@
 databases:
   - name: mysite
-    databaseName: mysite
+    databaseName: store_g72b
     user: mysite
     plan: free
 
@@ -15,7 +15,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysite
+          name: store_g72b
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
