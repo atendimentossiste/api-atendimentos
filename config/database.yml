@@ -18,21 +18,21 @@ default: &default
   encoding: unicode
   pool: 5
   username: myuser
-  password: 321321
   host: localhost
   port: 5432
 
 development:
   <<: *default
+  password: 321321
   database: store_development
 
 test:
   <<: *default
+  password: 321321
   database: store_test
 
 production:
   <<: *default
-  database: store_g72b
+  database: store_production
   url: <%= ENV['DATABASE_URL'] %>
-  username: myuser
   password: <%= ENV['DATABASE_PASSWORD'] %>
