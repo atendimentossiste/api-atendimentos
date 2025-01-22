@@ -2,14 +2,12 @@
 # exit on error
 set -o errexit
 
+# Ensure PostgreSQL is running
 sudo service postgresql start
 
 bundle install
 bundle exec rails assets:precompile
 bundle exec rails assets:clean
 
-# If you're using a Free instance type, you need to
-# perform database migrations in the build command.
-# Uncomment the following line:
-
+# Perform database migrations
 bundle exec rails db:migrate
