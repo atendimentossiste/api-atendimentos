@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # exit on error
-set -o errexit
 
-# Ensure PostgreSQL is running
-sudo service postgresql start
+set -o errexit
 
 bundle install
 bundle exec rails assets:precompile
