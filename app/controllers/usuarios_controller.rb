@@ -1,13 +1,22 @@
 class UsuariosController < ApplicationController
   before_action :set_usuario, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token
 
   # GET /usuarios or /usuarios.json
   def index
     @usuarios = Usuario.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @usuarios }
+    end
   end
 
   # GET /usuarios/1 or /usuarios/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @usuario }
+    end
   end
 
   # GET /usuarios/new
@@ -49,22 +58,20 @@ class UsuariosController < ApplicationController
 
   # DELETE /usuarios/1 or /usuarios/1.json
   def destroy
-    @usuario.destroy!
-
+    @usuario.destroy
     respond_to do |format|
-      format.html { redirect_to usuarios_path, status: :see_other, notice: "Usuario was successfully destroyed." }
+      format.html { redirect_to usuarios_url, notice: "Usuario was successfully destroyed." }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_usuario
-      @usuario = Usuario.find(params.expect(:id))
-    end
 
-    # Only allow a list of trusted parameters through.
-    def usuario_params
-      params.expect(usuario: [ :nome, :numero, :tipo_de_envio ])
-    end
+  def set_usuario
+    @usuario = Usuario.find(params[:id])
+  end
+
+  def usuario_params
+    params.require(:usuario).permit(:nome, :numero, :tipo_de_envio)
+  end
 end

@@ -1,5 +1,6 @@
 class ChatClientesController < ApplicationController
   before_action :set_chat_cliente, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token
 
   # GET /chat_clientes or /chat_clientes.json
   def index
