@@ -287,6 +287,8 @@ Marca o chat como concluído.<br>
 **Entrada**: ID do chat.<br>
 **Saída**: Confirmação de finalização. <br>
 
+---
+
 # FLUXO DE RESPOSTA DA IA
 **1**. Recebe a mensagem do cliente.<br>
 **2**. Processa o conteúdo atravésde descrições fornecidas à IA.<br>
