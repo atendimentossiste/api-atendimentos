@@ -42,5 +42,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_24_012533) do
     t.datetime "updated_at", null: false
     t.string "email"
     t.string "senha"
+    t.string "descricao"
   end
 end
