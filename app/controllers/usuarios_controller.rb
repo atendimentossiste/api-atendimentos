@@ -72,6 +72,6 @@ class UsuariosController < ApplicationController
   end
 
   def usuario_params
-    params.require(:usuario).permit(:nome, :numero, :tipo_de_envio)
+    params.require(:usuario).permit(:nome, :numero, :tipo_de_envio, :email, :senha, :descricao)
   end
 end
